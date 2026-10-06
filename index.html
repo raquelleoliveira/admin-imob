@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Vitão Corretor — Login</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="login-container">
+
+    <div class="login-painel">
+        <p class="login-frase">Gestão de processos e produtividade para a sua imobiliária.</p>
+    </div>
+
+    <div class="login-formulario">
+        <div class="login-icone">→</div>
+        <h1>Bem-vindo</h1>
+        <p class="login-subtitulo">Entre com suas credenciais para acessar o sistema</p>
+
+        <form id="form-login">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
+
+            <label for="senha">Senha</label>
+            <div class="campo-senha">
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required />
+                <button type="button" id="toggle-senha" aria-label="Mostrar senha">👁</button>
+            </div>
+
+            <div class="login-opcoes">
+                <label class="lembrar-me">
+                    <input type="checkbox" id="lembrar" name="lembrar" />
+                    <span>Lembrar-me</span>
+                </label>
+                <a href="#" class="esqueci-senha">Esqueci minha senha</a>
+            </div>
+
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-senha">
+<div class="modal-conteudo">
+
+    <div class="modal-icone">🔒</div>
+    <h2>Redefinir senha</h2>
+    <p class="modal-texto">Para redefinir sua senha, informe seu e-mail e enviaremos um link.</p>
+
+    <form id="form-redefinir">
+    <label for="email-redefinir">E-mail</label>
+    <input type="email" id="email-redefinir" name="email-redefinir" placeholder="voce@email.com" required />
+
+    <button type="submit">Enviar link de redefinição</button>
+    </form>
+
+    <a href="#" id="voltar-login">Voltar ao login</a>
+
+</div>
+</div>
+
+</body>
+</html>
