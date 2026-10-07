@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitão Corretor — Home</title>
+  <link rel="stylesheet" href="../css/app.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <aside class="sidebar">
+
+      <div class="sidebar-topo">
+        <span class="sidebar-logo">Vitão Corretor</span>
+        <button type="button" id="toggle-sidebar" aria-label="Recolher menu">«</button>
+      </div>
+
+      <nav class="sidebar-menu">
+        <a href="home.html" class="menu-item ativo">
+          <span class="menu-icone">🏠</span>
+          <span class="menu-texto">Home</span>
+        </a>
+        <a href="imoveis.html" class="menu-item">
+          <span class="menu-icone">🏢</span>
+          <span class="menu-texto">Imóveis</span>
+        </a>
+        <a href="proprietarios.html" class="menu-item">
+          <span class="menu-icone">👤</span>
+          <span class="menu-texto">Proprietários</span>
+        </a>
+        <a href="leads.html" class="menu-item">
+          <span class="menu-icone">🎯</span>
+          <span class="menu-texto">Leads</span>
+        </a>
+        <a href="negociacoes.html" class="menu-item">
+          <span class="menu-icone">🤝</span>
+          <span class="menu-texto">Negociações</span>
+        </a>
+        <a href="agenda.html" class="menu-item">
+          <span class="menu-icone">📅</span>
+          <span class="menu-texto">Agenda</span>
+        </a>
+        <a href="financeiro.html" class="menu-item">
+          <span class="menu-icone">💰</span>
+          <span class="menu-texto">Financeiro</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-rodape">
+        <a href="configuracoes.html" class="menu-item">
+          <span class="menu-icone">⚙️</span>
+          <span class="menu-texto">Configurações</span>
+        </a>
+
+        <div class="usuario">
+          <div class="usuario-avatar">R</div>
+          <div class="usuario-info">
+            <span class="usuario-nome">Raquelle</span>
+            <span class="usuario-cargo">Administradora</span>
+          </div>
+          <a href="../index.html" class="usuario-sair" aria-label="Sair">⏻</a>
+        </div>
+      </div>
+
+    </aside>
+
+    <main class="conteudo">
+
+      <header class="home-topo">
+        <div class="home-saudacao">
+          <h1>Olá, Raquelle</h1>
+          <p>Aqui está o resumo do seu dia.</p>
+        </div>
+
+        <form class="home-busca" role="search">
+          <label for="busca" class="sr-only">Buscar</label>
+          <input type="search" id="busca" name="busca" placeholder="Buscar imóvel, proprietário ou lead..." />
+        </form>
+      </header>
+
+      <section class="metricas">
+        <article class="metrica">
+          <span class="metrica-titulo">Pendências em aberto</span>
+          <strong class="metrica-valor">0</strong>
+        </article>
+
+        <article class="metrica">
+          <span class="metrica-titulo">Visitas hoje</span>
+          <strong class="metrica-valor">0</strong>
+        </article>
+
+        <article class="metrica">
+          <span class="metrica-titulo">Financeiro do mês</span>
+          <strong class="metrica-valor">R$ 0,00</strong>
+        </article>
+
+        <a href="imoveis.html?status=captacao" class="metrica metrica-link">
+          <span class="metrica-titulo">Imóveis em captação</span>
+          <strong class="metrica-valor">0</strong>
+        </a>
+      </section>
+
+      <section class="blocos">
+        <article class="bloco">
+          <div class="bloco-topo">
+            <h2>Pendências</h2>
+            <button type="button" class="btn-rapido">+ Nova</button>
+          </div>
+          <ul class="bloco-lista">
+            <li>Nenhuma pendência por enquanto.</li>
+          </ul>
+          <a href="#" class="bloco-link">Ver todas</a>
+        </article>
+
+        <article class="bloco">
+          <div class="bloco-topo">
+            <h2>Agenda</h2>
+            <button type="button" class="btn-rapido">+ Novo</button>
+          </div>
+          <ul class="bloco-lista">
+            <li>Nenhum compromisso para hoje.</li>
+          </ul>
+          <a href="agenda.html" class="bloco-link">Ver agenda completa</a>
+        </article>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

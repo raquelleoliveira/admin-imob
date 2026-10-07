@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+:root {
+  --azul: #01173c;
+  --laranja: #d47200;
+  --cinza-claro: #f0f0f0;
+  --cinza-borda: #d8d8d8;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar-topo,
+.home-topo,
+.bloco-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 4px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.sidebar-rodape {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.usuario-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.home-topo {
+  padding: 10px;
+}
+
+.metricas,
+.blocos {
+  display: grid;
+  gap: 16px;
+}
+
+.metricas {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.blocos {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.metrica {
+  display: grid;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
