@@ -213,7 +213,7 @@ body {
 }
 
 .blocos {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .metrica {
@@ -244,6 +244,67 @@ body {
 
 .metrica-link:hover {
   background-color: var(--laranja-suave);
+}
+
+.bloco {
+  background-color: var(--branco);
+  border: 1px solid var(--cinza-borda);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 260px;
+}
+
+.bloco-topo h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.btn-rapido {
+  padding: 6px 12px;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--laranja);
+  background-color: var(--laranja-suave);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-rapido:hover {
+  background-color: var(--laranja);
+  color: var(--branco);
+}
+
+.bloco-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  color: var(--cinza-texto);
+}
+
+.bloco-lista li {
+  padding: 10px 12px;
+  background-color: var(--cinza-claro);
+  border-radius: 8px;
+}
+
+.bloco-link {
+  margin-top: auto;
+  align-self: flex-start;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--laranja);
+  text-decoration: none;
+}
+
+.bloco-link:hover {
+  text-decoration: underline;
 }
 
 /* ===== Utilitários ===== */
