@@ -209,7 +209,7 @@ body {
 }
 
 .metricas {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
 .blocos {
@@ -217,10 +217,33 @@ body {
 }
 
 .metrica {
+  background-color: var(--branco);
+  border: 1px solid var(--cinza-borda);
+  border-radius: 12px;
+  padding: 20px;
   display: grid;
   gap: 6px;
   text-decoration: none;
   color: inherit;
+}
+
+.metrica-titulo {
+  font-size: 0.85rem;
+  color: var(--cinza-texto);
+}
+
+.metrica-valor {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.metrica-link {
+  border-left: 4px solid var(--laranja);
+  transition: background-color 0.2s;
+}
+
+.metrica-link:hover {
+  background-color: var(--laranja-suave);
 }
 
 /* ===== Utilitários ===== */
