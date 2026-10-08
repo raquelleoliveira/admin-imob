@@ -4,16 +4,17 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background-color: #f0f0f0;
-}
-
 :root {
   --azul: #01173c;
   --laranja: #d47200;
   --cinza-claro: #f0f0f0;
   --cinza-borda: #d8d8d8;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: var(--cinza-claro);
+  color: var(--azul);
 }
 
 .app {
