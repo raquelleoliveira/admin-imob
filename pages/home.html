@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vitão Corretor — Home</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
   <link rel="stylesheet" href="../css/app.css" />
 </head>
 <body>
@@ -14,54 +15,57 @@
 
       <div class="sidebar-topo">
         <span class="sidebar-logo">Vitão Corretor</span>
-        <button type="button" id="toggle-sidebar" aria-label="Recolher menu">«</button>
+        <button type="button" id="toggle-sidebar" aria-label="Recolher menu"><i class="ti ti-chevrons-left"></i></button>
       </div>
 
       <nav class="sidebar-menu">
         <a href="home.html" class="menu-item ativo">
-          <span class="menu-icone">🏠</span>
+          <span class="menu-icone"><i class="ti ti-home"></i></span>
           <span class="menu-texto">Home</span>
         </a>
         <a href="imoveis.html" class="menu-item">
-          <span class="menu-icone">🏢</span>
+          <span class="menu-icone"><i class="ti ti-building"></i></span>
           <span class="menu-texto">Imóveis</span>
         </a>
         <a href="proprietarios.html" class="menu-item">
-          <span class="menu-icone">👤</span>
+          <span class="menu-icone"><i class="ti ti-user"></i></span>
           <span class="menu-texto">Proprietários</span>
         </a>
         <a href="leads.html" class="menu-item">
-          <span class="menu-icone">🎯</span>
+          <span class="menu-icone"><i class="ti ti-target-arrow"></i></span>
           <span class="menu-texto">Leads</span>
         </a>
         <a href="negociacoes.html" class="menu-item">
-          <span class="menu-icone">🤝</span>
+          <span class="menu-icone"><i class="ti ti-briefcase"></i></span>
           <span class="menu-texto">Negociações</span>
         </a>
         <a href="agenda.html" class="menu-item">
-          <span class="menu-icone">📅</span>
+          <span class="menu-icone"><i class="ti ti-calendar"></i></span>
           <span class="menu-texto">Agenda</span>
         </a>
         <a href="financeiro.html" class="menu-item">
-          <span class="menu-icone">💰</span>
+          <span class="menu-icone"><i class="ti ti-wallet"></i></span>
           <span class="menu-texto">Financeiro</span>
+        </a>
+        <a href="configuracoes.html" class="menu-item">
+          <span class="menu-icone"><i class="ti ti-settings"></i></span>
+          <span class="menu-texto">Configurações</span>
         </a>
       </nav>
 
       <div class="sidebar-rodape">
-        <a href="configuracoes.html" class="menu-item">
-          <span class="menu-icone">⚙️</span>
-          <span class="menu-texto">Configurações</span>
-        </a>
-
         <div class="usuario">
           <div class="usuario-avatar">R</div>
           <div class="usuario-info">
             <span class="usuario-nome">Raquelle</span>
             <span class="usuario-cargo">Administradora</span>
           </div>
-          <a href="../index.html" class="usuario-sair" aria-label="Sair">⏻</a>
         </div>
+
+        <a href="../index.html" class="menu-item">
+          <span class="menu-icone"><i class="ti ti-logout"></i></span>
+          <span class="menu-texto">Sair</span>
+        </a>
       </div>
 
     </aside>
