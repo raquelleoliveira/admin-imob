@@ -160,8 +160,46 @@ body {
 }
 
 /* ===== Conteúdo ===== */
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+}
+
 .home-topo {
-  padding: 10px;
+  gap: 24px;
+}
+
+.home-saudacao h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.home-saudacao p {
+  margin-top: 4px;
+  color: var(--cinza-texto);
+}
+
+.home-busca {
+  flex: 1;
+  max-width: 360px;
+}
+
+.home-busca input {
+  width: 100%;
+  padding: 10px 14px;
+  font: inherit;
+  color: inherit;
+  background-color: var(--branco);
+  border: 1px solid var(--cinza-borda);
+  border-radius: 10px;
+}
+
+.home-busca input:focus {
+  outline: none;
+  border-color: var(--laranja);
+  box-shadow: 0 0 0 3px var(--laranja-suave);
 }
 
 .metricas,
