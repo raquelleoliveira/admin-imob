@@ -9,3 +9,5 @@ function alternarSenha() {
         campoSenha.setAttribute('type', 'password');
     }
 }
+
+botaoToggleSenha.addEventListener('click', alternarSenha);
