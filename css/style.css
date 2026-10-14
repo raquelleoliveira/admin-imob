@@ -93,8 +93,10 @@ form label:first-of-type {
   margin-top: 0;
 }
 
+/* corrigido: o campo de senha é pego pela div .campo-senha, não pelo type,
+   pra manter o estilo quando o olho troca de password pra text */
 form input[type="email"],
-form input[type="password"] {
+.campo-senha input {
   width: 100%;
   padding: 12px 14px;
   border: 1px solid #d8d8d8;
@@ -104,15 +106,21 @@ form input[type="password"] {
   color: #01173c;
   outline: none;
   transition: border-color 0.2s;
+  font-family: inherit;
 }
 
 form input[type="email"]:focus,
-form input[type="password"]:focus {
+.campo-senha input:focus {
   border-color: #d47200;
 }
 
 .campo-senha {
   position: relative;
+}
+
+/* espaço à direita pra o texto não passar por baixo do olho */
+.campo-senha input {
+  padding-right: 44px;
 }
 
 .campo-senha button {
@@ -255,6 +263,7 @@ form button[type="submit"]:hover {
   outline: none;
   margin-bottom: 20px;
   transition: border-color 0.2s;
+  font-family: inherit;
 }
 
 #form-redefinir input:focus {
