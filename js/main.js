@@ -11,3 +11,7 @@ function alternarSenha() {
 }
 
 botaoToggleSenha.addEventListener('click', alternarSenha);
+
+const linkEsqueciSenha = document.querySelector('.esqueci-senha');
+const linkVoltarLogin = document.querySelector('#voltar-login');
+const modalSenha = document.querySelector('#modal-senha');
