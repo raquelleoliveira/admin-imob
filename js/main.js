@@ -29,3 +29,19 @@ function fecharModal(event) {
 }
 
 linkVoltarLogin.addEventListener('click', fecharModal);
+
+const formLogin = document.querySelector('#form-login');
+const formRedefinir = document.querySelector('#form-redefinir');
+
+function enviarLogin(event) {
+    event.preventDefault();
+    console.log('Login enviado');
+}
+
+function enviarRedefinicao(event) {
+    event.preventDefault();
+    console.log('Redefinição enviada');
+}
+
+formLogin.addEventListener('submit', enviarLogin);
+formRedefinir.addEventListener('submit', enviarRedefinicao);
