@@ -19,3 +19,5 @@ const modalSenha = document.querySelector('#modal-senha');
 function abrirModal() {
     modalSenha.classList.add('ativo');
 }
+
+linkEsqueciSenha.addEventListener('click', abrirModal);
