@@ -21,3 +21,9 @@ function abrirModal() {
 }
 
 linkEsqueciSenha.addEventListener('click', abrirModal);
+
+function fecharModal() {
+    modalSenha.classList.remove('ativo');
+}
+
+linkVoltarLogin.addEventListener('click', fecharModal);
