@@ -307,6 +307,40 @@ body {
   text-decoration: underline;
 }
 
+/* ===== Sidebar recolhida ===== */
+.app {
+  transition: grid-template-columns 0.2s;
+}
+
+.app.sidebar-recolhida {
+  grid-template-columns: 72px 1fr;
+}
+
+.sidebar-recolhida .sidebar-logo,
+.sidebar-recolhida .usuario-info {
+  display: none;
+}
+
+/* textos do menu: somem da tela, mas continuam acessíveis ao leitor de tela */
+.sidebar-recolhida .menu-texto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.sidebar-recolhida .sidebar-topo,
+.sidebar-recolhida .menu-item,
+.sidebar-recolhida .usuario {
+  justify-content: center;
+}
+
+.sidebar-recolhida .usuario {
+  padding: 8px 0;
+}
+
 /* ===== Utilitários ===== */
 .sr-only {
   position: absolute;
