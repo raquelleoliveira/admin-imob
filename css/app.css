@@ -350,3 +350,93 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
 }
+
+/* ===== Leads ===== */
+/* ===== Leads ===== */
+.card-form,
+.card-lista {
+  background-color: var(--branco);
+  border: 1px solid var(--cinza-borda);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.card-form {
+  margin-bottom: 24px;
+}
+
+/* --- Formulário --- */
+#form-lead {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+  max-width: 720px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cinza-texto);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font: inherit;
+  color: inherit;
+  background-color: var(--branco);
+  border: 1px solid var(--cinza-borda);
+  border-radius: 10px;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--laranja);
+  box-shadow: 0 0 0 3px var(--laranja-suave);
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.campo-largo {
+  grid-column: 1 / -1;
+}
+
+#form-lead button {
+  grid-column: 1 / -1;
+  justify-self: start;
+}
+
+.btn-primario {
+  padding: 10px 20px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--branco);
+  background-color: var(--laranja);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primario:hover {
+  background-color: #b86200;
+}
+
+@media (max-width: 700px) {
+  #form-lead {
+    grid-template-columns: 1fr;
+  }
+}
