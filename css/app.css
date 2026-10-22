@@ -797,3 +797,12 @@ body {
   color: var(--vermelho);
   background-color: var(--vermelho-suave);
 }
+
+/* ===== Configurações ===== */
+.bloco-compacto {
+  min-height: 0;
+}
+
+.modal-caixa-larga {
+  max-width: 960px;
+}
