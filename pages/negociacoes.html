@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vitão Corretor — Negociações</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <link rel="stylesheet" href="../css/app.css" />
+</head>
+
+<body>
+
+    <div class="app">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-topo">
+                <span class="sidebar-logo">Vitão Corretor</span>
+                <button type="button" id="toggle-sidebar" aria-label="Recolher menu"><i
+                        class="ti ti-chevrons-left"></i></button>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="home.html" class="menu-item">
+                    <span class="menu-icone"><i class="ti ti-home"></i></span>
+                    <span class="menu-texto">Home</span>
+                </a>
+                <a href="imoveis.html" class="menu-item">
+                    <span class="menu-icone"><i class="ti ti-building"></i></span>
+                    <span class="menu-texto">Imóveis</span>
+                </a>
+                <a href="proprietarios.html" class="menu-item">
+                    <span class="menu-icone"><i class="ti ti-user"></i></span>
+                    <span class="menu-texto">Proprietários</span>
+                </a>
+                <a href="leads.html" class="menu-item">
+                    <span class="menu-icone"><i class="ti ti-target-arrow"></i></span>
+                    <span class="menu-texto">Leads</span>
+                </a>
+                <a href="negociacoes.html" class="menu-item ativo">
+                    <span class="menu-icone"><i class="ti ti-briefcase"></i></span>
+                    <span class="menu-texto">Negociações</span>
+                </a>
+                <a href="agenda.html" class="menu-item">
+                    <span class="menu-icone"><i class="ti ti-calendar"></i></span>
+                    <span class="menu-texto">Agenda</span>
+                </a>
+                <a href="financeiro.html" class="menu-item">
+                    <span class="menu-icone"><i class="ti ti-wallet"></i></span>
+                    <span class="menu-texto">Financeiro</span>
+                </a>
+                <a href="configuracoes.html" class="menu-item">
+                    <span class="menu-icone"><i class="ti ti-settings"></i></span>
+                    <span class="menu-texto">Configurações</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-rodape">
+                <div class="usuario">
+                    <div class="usuario-avatar">R</div>
+                    <div class="usuario-info">
+                        <span class="usuario-nome">Raquelle</span>
+                        <span class="usuario-cargo">Administradora</span>
+                    </div>
+                </div>
+
+                <a href="../index.html" class="menu-item">
+                    <span class="menu-icone"><i class="ti ti-logout"></i></span>
+                    <span class="menu-texto">Sair</span>
+                </a>
+            </div>
+
+        </aside>
+
+        <main class="conteudo">
+
+            <header class="topo-pagina">
+                <h1>Negociações</h1>
+                <div class="topo-acoes">
+                    <button type="button" class="btn-primario" id="abrir-modal">
+                        <i class="ti ti-plus"></i> Nova negociação
+                    </button>
+                </div>
+            </header>
+
+            <section class="card-lista">
+                <table class="tabela-leads">
+                    <thead>
+                        <tr>
+                            <th>Imóvel</th>
+                            <th>Cliente</th>
+                            <th>Tipo</th>
+                            <th>Valor</th>
+                            <th>Comissão</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-negociacoes">
+                        <tr>
+                            <td>Apartamento 2 dorm — Centro</td>
+                            <td>Mariana Souza</td>
+                            <td>Venda</td>
+                            <td>R$ 350.000,00</td>
+                            <td>R$ 21.000,00</td>
+                            <td><span class="badge status-em-negociacao">Em negociação</span></td>
+                            <td class="acoes">
+                                <button type="button" class="btn-icone" aria-label="Editar">
+                                    <i class="ti ti-pencil"></i>
+                                </button>
+                                <button type="button" class="btn-icone" aria-label="Excluir">
+                                    <i class="ti ti-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+    </div>
+
+    <div class="modal escondido" id="modal-negociacao">
+        <div class="modal-caixa">
+
+            <header class="modal-topo">
+                <h2 id="titulo-modal">Nova negociação</h2>
+                <button type="button" class="btn-fechar" id="fechar-modal" aria-label="Fechar">
+                    <i class="ti ti-x"></i>
+                </button>
+            </header>
+
+            <form id="form-negociacao" class="form-grid">
+
+                <div class="campo">
+                    <label for="imovelId">Imóvel</label>
+                    <select id="imovelId" name="imovelId" required>
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="clienteId">Cliente</label>
+                    <select id="clienteId" name="clienteId" required>
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="tipo">Tipo</label>
+                    <select id="tipo" name="tipo">
+                        <option value="venda">Venda</option>
+                        <option value="locacao">Locação</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="status">Status</label>
+                    <select id="status" name="status">
+                        <option value="em-negociacao">Em negociação</option>
+                        <option value="proposta">Proposta</option>
+                        <option value="documentacao">Documentação</option>
+                        <option value="fechado">Fechado</option>
+                        <option value="cancelado">Cancelado</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="valor">Valor</label>
+                    <input type="number" id="valor" name="valor" min="0" required>
+                </div>
+
+                <div class="campo">
+                    <label for="comissaoPercentual">Comissão (%)</label>
+                    <input type="number" id="comissaoPercentual" name="comissaoPercentual" min="0" max="100" step="0.1">
+                </div>
+
+                <div class="campo">
+                    <label for="comissaoValor">Comissão (R$)</label>
+                    <input type="number" id="comissaoValor" name="comissaoValor" readonly>
+                </div>
+
+                <div class="campo campo-largo">
+                    <label for="observacoes">Observações</label>
+                    <textarea id="observacoes" name="observacoes" rows="3"></textarea>
+                </div>
+
+                <div class="form-acoes">
+                    <button type="button" class="btn-secundario" id="cancelar-modal">Cancelar</button>
+                    <button type="submit" class="btn-primario">Salvar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
