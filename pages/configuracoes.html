@@ -129,10 +129,10 @@
 
             <section class="bloco">
                 <div class="bloco-topo">
-                    <h2>Minha conta</h2>
+                    <h2>Meus dados</h2>
                 </div>
 
-                <form id="form-conta" class="form-grid">
+                <form id="form-meus-dados" class="form-grid">
 
                     <div class="campo">
                         <label for="contaNome">Nome</label>
@@ -144,18 +144,47 @@
                         <input type="email" id="contaEmail" name="contaEmail">
                     </div>
 
-                    <div class="campo">
-                        <label for="senhaAtual">Senha atual</label>
-                        <input type="password" id="senhaAtual" name="senhaAtual" autocomplete="current-password">
+                    <div class="form-acoes">
+                        <button type="submit" class="btn-primario">Salvar</button>
                     </div>
+                </form>
+            </section>
 
-                    <div class="campo">
-                        <label for="novaSenha">Nova senha</label>
-                        <input type="password" id="novaSenha" name="novaSenha" autocomplete="new-password">
+            <section class="bloco">
+                <div class="bloco-topo">
+                    <h2>Alterar senha</h2>
+                </div>
+
+                <form id="form-senha" class="form-grid">
+
+                    <div class="form-linha-tres">
+                        <div class="campo">
+                            <label for="senhaAtual">Senha atual</label>
+                            <div class="campo-senha">
+                                <input type="password" id="senhaAtual" name="senhaAtual" autocomplete="current-password" required>
+                                <button type="button" aria-label="Mostrar senha"><i class="ti ti-eye"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <label for="novaSenha">Nova senha</label>
+                            <div class="campo-senha">
+                                <input type="password" id="novaSenha" name="novaSenha" autocomplete="new-password" required>
+                                <button type="button" aria-label="Mostrar senha"><i class="ti ti-eye"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <label for="confirmarSenha">Confirmar nova senha</label>
+                            <div class="campo-senha">
+                                <input type="password" id="confirmarSenha" name="confirmarSenha" autocomplete="new-password" required>
+                                <button type="button" aria-label="Mostrar senha"><i class="ti ti-eye"></i></button>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-acoes">
-                        <button type="submit" class="btn-primario">Salvar</button>
+                        <button type="submit" class="btn-primario">Alterar senha</button>
                     </div>
                 </form>
             </section>
