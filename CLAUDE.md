@@ -15,6 +15,7 @@
 - Cores sempre pelas variáveis do `:root`. Nunca hexadecimal fora dele.
 - Antes de criar classe nova, conferir se já existe equivalente.
 - `transition` vai na regra base do elemento, nunca na classe que muda o valor.
+- Evitar `!important`. A única exceção são classes utilitárias como `.escondido`, cuja função é sempre vencer o `display` do componente.
 
 ## Padrão de tela
 
