@@ -31,11 +31,16 @@
 - `name` igual à chave que o objeto terá no JS; `label` com `for` apontando para o `id`; `select` com `value` minúsculo e sem acento.
 - Três campos relacionados na mesma linha vão dentro de `<div class="form-linha-tres">`: três colunas iguais, que viram uma só até 700px.
 
+## JavaScript
+
+- O JavaScript deste projeto é escrito manualmente, sem geração automática de código.
+- Tarefas de interface entregam apenas HTML e CSS, com os `id` e classes necessários nos elementos, e descrevem no PR qual comportamento ainda falta implementar.
+
 ## Git
 
 - Uma branch por tarefa, commits pequenos.
 - `git checkout main && git pull` antes de criar a branch.
 - PR com título e descrição, aberto com `gh pr create`.
-- Logo depois de cada push para uma branch com PR aberto, conferir com `gh pr view <n> --json commits` se o PR aponta para o último commit. Se não apontar, avisar a Raquelle.
+- Logo depois de cada push para uma branch com PR aberto, conferir com `gh pr view <n> --json commits` se o PR aponta para o último commit. Se não apontar, fechar e reabrir o PR (`gh pr close <n>` e `gh pr reopen <n>`) sem pedir autorização, conferir de novo e avisar a Raquelle que isso foi feito.
 - Nunca fazer merge pelo terminal — a Raquelle revisa e mergeia pelo site.
 - Parar e avisar depois de abrir o PR; não começar a próxima tarefa antes do merge.
