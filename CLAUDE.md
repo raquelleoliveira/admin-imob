@@ -31,6 +31,10 @@
 - `name` igual à chave que o objeto terá no JS; `label` com `for` apontando para o `id`; `select` com `value` minúsculo e sem acento.
 - Três campos relacionados na mesma linha vão dentro de `<div class="form-linha-tres">`: três colunas iguais, que viram uma só até 700px.
 
+## JavaScript
+
+- O JS deste projeto é escrito pela Raquelle. Não escrever JS, nem mesmo pequenos trechos para completar uma tela. Fazer só o HTML e o CSS, deixar os `id` necessários e dizer na descrição do PR qual comportamento falta implementar.
+
 ## Git
 
 - Uma branch por tarefa, commits pequenos.
