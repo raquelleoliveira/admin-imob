@@ -14,6 +14,12 @@
   --cinza-claro: #f0f0f0;
   --cinza-borda: #d8d8d8;
   --cinza-texto: #6b6b6b;
+  --azul-claro: #0369a1;
+  --azul-claro-suave: #e0f2fe;
+  --roxo: #7c3aed;
+  --roxo-suave: #ede9fe;
+  --vermelho: #b91c1c;
+  --vermelho-suave: #fee2e2;
 }
 
 body {
@@ -750,4 +756,20 @@ body {
   font-weight: 600;
   color: var(--cinza-texto);
   cursor: pointer;
+}
+
+/* ===== Negociações ===== */
+.status-em-negociacao {
+  color: var(--azul-claro);
+  background-color: var(--azul-claro-suave);
+}
+
+.status-documentacao {
+  color: var(--roxo);
+  background-color: var(--roxo-suave);
+}
+
+.status-cancelado {
+  color: var(--vermelho);
+  background-color: var(--vermelho-suave);
 }
