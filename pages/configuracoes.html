@@ -121,6 +121,28 @@
                         <input type="text" id="endereco" name="endereco" placeholder="Rua, número, complemento">
                     </div>
 
+                    <h3 class="form-secao">Minha conta</h3>
+
+                    <div class="campo">
+                        <label for="contaNome">Nome</label>
+                        <input type="text" id="contaNome" name="contaNome">
+                    </div>
+
+                    <div class="campo">
+                        <label for="contaEmail">E-mail</label>
+                        <input type="email" id="contaEmail" name="contaEmail">
+                    </div>
+
+                    <div class="campo">
+                        <label for="senhaAtual">Senha atual</label>
+                        <input type="password" id="senhaAtual" name="senhaAtual" autocomplete="current-password">
+                    </div>
+
+                    <div class="campo">
+                        <label for="novaSenha">Nova senha</label>
+                        <input type="password" id="novaSenha" name="novaSenha" autocomplete="new-password">
+                    </div>
+
                     <h3 class="form-secao">Usuários</h3>
 
                     <ul class="bloco-lista campo-largo" id="lista-usuarios">
@@ -143,6 +165,7 @@
                             <select id="usuarioPerfil" name="usuarioPerfil">
                                 <option value="administrador">Administrador</option>
                                 <option value="corretor">Corretor</option>
+                                <option value="corretor-externo">Corretor externo</option>
                             </select>
                         </div>
                     </div>
