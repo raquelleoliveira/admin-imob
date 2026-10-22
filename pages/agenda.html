@@ -91,7 +91,8 @@
                             <th>Data/hora</th>
                             <th>Tipo</th>
                             <th>Imóvel</th>
-                            <th>Com quem</th>
+                            <th>Responsável</th>
+                            <th>Contato</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -100,6 +101,7 @@
                             <td>28/10/2026 14:00</td>
                             <td>Visita</td>
                             <td>Apartamento 2 dorm — Centro</td>
+                            <td>Raquelle</td>
                             <td>Mariana Souza</td>
                             <td class="acoes">
                                 <button type="button" class="btn-icone" aria-label="Editar">
@@ -142,38 +144,46 @@
                     </div>
 
                     <div class="campo">
-                        <label for="tipo">Tipo</label>
-                        <select id="tipo" name="tipo">
-                            <option value="visita">Visita</option>
-                            <option value="captacao">Captação</option>
-                            <option value="assinatura">Assinatura</option>
-                            <option value="entrega-chave">Entrega de chave</option>
-                            <option value="outro">Outro</option>
+                        <label for="responsavel">Responsável</label>
+                        <select id="responsavel" name="responsavel" required>
+                            <option value="">Selecione</option>
+                            <option value="raquelle">Raquelle</option>
+                            <option value="vitor">Vitor</option>
+                            <option value="corretor-externo">Corretor externo</option>
                         </select>
                     </div>
                 </div>
 
-                <div class="form-linha-tres">
-                    <div class="campo">
-                        <label for="imovelId">Imóvel</label>
-                        <select id="imovelId" name="imovelId">
-                            <option value="">Selecione</option>
-                        </select>
-                    </div>
+                <div class="campo">
+                    <label for="tipo">Tipo</label>
+                    <select id="tipo" name="tipo">
+                        <option value="visita">Visita</option>
+                        <option value="captacao">Captação</option>
+                        <option value="assinatura">Assinatura</option>
+                        <option value="entrega-chave">Entrega de chave</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
 
-                    <div class="campo">
-                        <label for="clienteId">Cliente</label>
-                        <select id="clienteId" name="clienteId">
-                            <option value="">Selecione</option>
-                        </select>
-                    </div>
+                <div class="campo">
+                    <label for="imovelId">Imóvel</label>
+                    <select id="imovelId" name="imovelId">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
 
-                    <div class="campo">
-                        <label for="proprietarioId">Proprietário</label>
-                        <select id="proprietarioId" name="proprietarioId">
-                            <option value="">Selecione</option>
-                        </select>
-                    </div>
+                <div class="campo">
+                    <label for="clienteId">Cliente</label>
+                    <select id="clienteId" name="clienteId">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="proprietarioId">Proprietário</label>
+                    <select id="proprietarioId" name="proprietarioId">
+                        <option value="">Selecione</option>
+                    </select>
                 </div>
 
                 <div class="campo campo-largo">
