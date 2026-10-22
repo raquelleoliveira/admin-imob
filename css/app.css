@@ -20,6 +20,10 @@
   --roxo-suave: #ede9fe;
   --vermelho: #b91c1c;
   --vermelho-suave: #fee2e2;
+  --azul-vivo: #1d4ed8;
+  --azul-vivo-suave: #dbeafe;
+  --verde: #15803d;
+  --verde-suave: #dcfce7;
 }
 
 body {
@@ -483,18 +487,18 @@ body {
 }
 
 .status-novo {
-  color: #1d4ed8;
-  background-color: #dbeafe;
+  color: var(--azul-vivo);
+  background-color: var(--azul-vivo-suave);
 }
 
 .status-em-contato {
-  color: #0369a1;
-  background-color: #e0f2fe;
+  color: var(--azul-claro);
+  background-color: var(--azul-claro-suave);
 }
 
 .status-visita-agendada {
-  color: #7c3aed;
-  background-color: #ede9fe;
+  color: var(--roxo);
+  background-color: var(--roxo-suave);
 }
 
 .status-proposta {
@@ -503,13 +507,13 @@ body {
 }
 
 .status-fechado {
-  color: #15803d;
-  background-color: #dcfce7;
+  color: var(--verde);
+  background-color: var(--verde-suave);
 }
 
 .status-perdido {
-  color: #b91c1c;
-  background-color: #fee2e2;
+  color: var(--vermelho);
+  background-color: var(--vermelho-suave);
 }
 
 /* --- Modal --- */
@@ -712,23 +716,23 @@ body {
 }
 
 .status-disponivel {
-  color: #15803d;
-  background-color: #dcfce7;
+  color: var(--verde);
+  background-color: var(--verde-suave);
 }
 
 .status-reservado {
-  color: #7c3aed;
-  background-color: #ede9fe;
+  color: var(--roxo);
+  background-color: var(--roxo-suave);
 }
 
 .status-vendido {
-  color: #1d4ed8;
-  background-color: #dbeafe;
+  color: var(--azul-vivo);
+  background-color: var(--azul-vivo-suave);
 }
 
 .status-alugado {
-  color: #0369a1;
-  background-color: #e0f2fe;
+  color: var(--azul-claro);
+  background-color: var(--azul-claro-suave);
 }
 
 .status-inativo {
