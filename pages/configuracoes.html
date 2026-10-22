@@ -81,10 +81,10 @@
 
             <section class="bloco">
                 <div class="bloco-topo">
-                    <h2>Dados gerais</h2>
+                    <h2>Imobiliária</h2>
                 </div>
 
-                <form id="form-configuracoes" class="form-grid">
+                <form id="form-imobiliaria" class="form-grid">
 
                     <div class="campo">
                         <label for="nome">Nome da imobiliária</label>
@@ -121,7 +121,18 @@
                         <input type="text" id="endereco" name="endereco" placeholder="Rua, número, complemento">
                     </div>
 
-                    <h3 class="form-secao">Minha conta</h3>
+                    <div class="form-acoes">
+                        <button type="submit" class="btn-primario">Salvar</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="bloco">
+                <div class="bloco-topo">
+                    <h2>Minha conta</h2>
+                </div>
+
+                <form id="form-conta" class="form-grid">
 
                     <div class="campo">
                         <label for="contaNome">Nome</label>
@@ -143,11 +154,24 @@
                         <input type="password" id="novaSenha" name="novaSenha" autocomplete="new-password">
                     </div>
 
-                    <h3 class="form-secao">Usuários</h3>
+                    <div class="form-acoes">
+                        <button type="submit" class="btn-primario">Salvar</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="bloco">
+                <div class="bloco-topo">
+                    <h2>Usuários</h2>
+                </div>
+
+                <form id="form-usuarios" class="form-grid">
 
                     <ul class="bloco-lista campo-largo" id="lista-usuarios">
                         <li>Raquelle — Administradora</li>
                     </ul>
+
+                    <h3 class="form-secao">Adicionar novo usuário</h3>
 
                     <div class="form-linha-tres">
                         <div class="campo">
@@ -171,10 +195,9 @@
                     </div>
 
                     <div class="form-acoes">
-                        <button type="button" class="btn-secundario" id="adicionar-usuario">
+                        <button type="submit" class="btn-primario" id="adicionar-usuario">
                             <i class="ti ti-user-plus"></i> Adicionar usuário
                         </button>
-                        <button type="submit" class="btn-primario">Salvar</button>
                     </div>
                 </form>
             </section>
