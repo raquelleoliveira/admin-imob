@@ -785,3 +785,14 @@ body {
   color: var(--vermelho);
   background-color: var(--vermelho-suave);
 }
+
+/* ===== Financeiro ===== */
+.status-entrada {
+  color: var(--verde);
+  background-color: var(--verde-suave);
+}
+
+.status-saida {
+  color: var(--vermelho);
+  background-color: var(--vermelho-suave);
+}
