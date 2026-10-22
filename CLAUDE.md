@@ -33,7 +33,8 @@
 
 ## JavaScript
 
-- O JS deste projeto é escrito pela Raquelle. Não escrever JS, nem mesmo pequenos trechos para completar uma tela. Fazer só o HTML e o CSS, deixar os `id` necessários e dizer na descrição do PR qual comportamento falta implementar.
+- O JavaScript deste projeto é escrito manualmente, sem geração automática de código.
+- Tarefas de interface entregam apenas HTML e CSS, com os `id` e classes necessários nos elementos, e descrevem no PR qual comportamento ainda falta implementar.
 
 ## Git
 
