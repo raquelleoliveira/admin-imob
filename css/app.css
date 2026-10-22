@@ -643,11 +643,42 @@ body {
   padding-top: 8px;
 }
 
+/* campo de senha com o botão de mostrar/ocultar (olho) dentro, como no login */
+.campo-senha {
+  position: relative;
+}
+
+/* espaço à direita pra o texto não passar por baixo do olho */
+.campo-senha input {
+  padding-right: 44px;
+}
+
+.campo-senha button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  padding: 4px;
+  font-size: 1.1rem;
+  color: var(--cinza-texto);
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.campo-senha button:hover {
+  color: var(--laranja);
+}
+
 /* --- Foco do teclado --- */
 .btn-primario:focus-visible,
 .btn-secundario:focus-visible,
 .btn-icone:focus-visible,
-.btn-fechar:focus-visible {
+.btn-fechar:focus-visible,
+.campo-senha button:focus-visible {
   outline: 2px solid var(--laranja);
   outline-offset: 2px;
 }
