@@ -360,8 +360,9 @@ body {
   white-space: nowrap;
 }
 
+/* !important: precisa vencer o display de .modal, .campo etc., que vêm depois no arquivo */
 .escondido {
-  display: none;
+  display: none !important;
 }
 
 /* ===== Leads ===== */
