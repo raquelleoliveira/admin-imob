@@ -28,6 +28,7 @@
 - Todo `<form>` leva `class="form-grid"` além do `id`. Nunca estilizar formulário por `id`.
 - Formulário com mais de um assunto usa `<h3 class="form-secao">` a partir do segundo bloco; o primeiro não leva `h3`. Assunto único não usa seção.
 - `name` igual à chave que o objeto terá no JS; `label` com `for` apontando para o `id`; `select` com `value` minúsculo e sem acento.
+- Três campos relacionados na mesma linha vão dentro de `<div class="form-linha-tres">`: três colunas iguais, que viram uma só até 700px.
 
 ## Git
 
