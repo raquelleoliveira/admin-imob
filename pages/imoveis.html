@@ -99,6 +99,7 @@
                 <table class="tabela-leads">
                     <thead>
                         <tr>
+                            <th>Código</th>
                             <th>Foto</th>
                             <th>Título</th>
                             <th>Tipo</th>
@@ -110,6 +111,7 @@
                     </thead>
                     <tbody id="lista-imoveis">
                         <tr>
+                            <td>AP0007</td>
                             <td><img class="foto-miniatura" src="https://placehold.co/48x48" alt="" /></td>
                             <td>Apartamento 2 dorm — Centro</td>
                             <td>Apartamento</td>
@@ -144,6 +146,11 @@
             </header>
 
             <form id="form-imovel" class="form-grid">
+
+                <div class="campo">
+                    <label for="codigo">Código</label>
+                    <input type="text" id="codigo" name="codigo" placeholder="AP0007" required>
+                </div>
 
                 <div class="campo campo-largo">
                     <label for="titulo">Título</label>
