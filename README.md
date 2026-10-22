@@ -25,6 +25,12 @@ está sendo implementado um módulo por vez, começando por Leads.
 | **Financeiro** | Entradas e saídas, com o resumo do mês |
 | **Configurações** | Dados da imobiliária, usuários e lixeira |
 
+## As telas
+![Home](docs/home.png)
+![Imóveis](docs/imoveis.png)
+![Leads](docs/leads-modal.png)
+![Configurações](docs/configuracoes.png)
+
 ## Por que fiz assim
 
 **Sem framework, de propósito.** Quero dominar HTML, CSS e JavaScript antes
