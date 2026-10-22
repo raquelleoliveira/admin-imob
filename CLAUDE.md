@@ -41,6 +41,6 @@
 - Uma branch por tarefa, commits pequenos.
 - `git checkout main && git pull` antes de criar a branch.
 - PR com título e descrição, aberto com `gh pr create`.
-- Logo depois de cada push para uma branch com PR aberto, conferir com `gh pr view <n> --json commits` se o PR aponta para o último commit. Se não apontar, avisar a Raquelle.
+- Logo depois de cada push para uma branch com PR aberto, conferir com `gh pr view <n> --json commits` se o PR aponta para o último commit. Se não apontar, fechar e reabrir o PR (`gh pr close <n>` e `gh pr reopen <n>`) sem pedir autorização, conferir de novo e avisar a Raquelle que isso foi feito.
 - Nunca fazer merge pelo terminal — a Raquelle revisa e mergeia pelo site.
 - Parar e avisar depois de abrir o PR; não começar a próxima tarefa antes do merge.
