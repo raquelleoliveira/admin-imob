@@ -566,7 +566,7 @@ body {
 }
 
 /* --- Formulário --- */
-#form-lead {
+.form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px 20px;
@@ -631,7 +631,123 @@ body {
 }
 
 @media (max-width: 700px) {
-  #form-lead {
+  .form-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ===== Imóveis ===== */
+.filtro-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filtro-item {
+  padding: 8px 16px;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cinza-texto);
+  background-color: var(--branco);
+  border: 1px solid var(--cinza-borda);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.filtro-item:hover {
+  background-color: var(--cinza-claro);
+  color: var(--azul);
+}
+
+.filtro-item.ativo {
+  color: var(--branco);
+  background-color: var(--azul);
+  border-color: var(--azul);
+}
+
+.filtro-item.filtro-destaque {
+  color: var(--laranja-escuro);
+  background-color: var(--laranja-suave);
+  border-color: var(--laranja);
+}
+
+.filtro-item.filtro-destaque.ativo {
+  color: var(--branco);
+  background-color: var(--laranja);
+  border-color: var(--laranja);
+}
+
+.filtro-item:focus-visible {
+  outline: 2px solid var(--laranja);
+  outline-offset: 2px;
+}
+
+.foto-miniatura {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: var(--cinza-claro);
+}
+
+.status-captacao {
+  color: var(--laranja-escuro);
+  background-color: var(--laranja-suave);
+}
+
+.status-disponivel {
+  color: #15803d;
+  background-color: #dcfce7;
+}
+
+.status-reservado {
+  color: #7c3aed;
+  background-color: #ede9fe;
+}
+
+.status-vendido {
+  color: #1d4ed8;
+  background-color: #dbeafe;
+}
+
+.status-alugado {
+  color: #0369a1;
+  background-color: #e0f2fe;
+}
+
+.status-inativo {
+  color: var(--cinza-texto);
+  background-color: var(--cinza-claro);
+}
+
+.form-secao {
+  grid-column: 1 / -1;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--azul);
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--cinza-borda);
+}
+
+.campo-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.campo-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--laranja);
+  cursor: pointer;
+}
+
+.campo-checkbox label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cinza-texto);
+  cursor: pointer;
 }

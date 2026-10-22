@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vitão Corretor — Imóveis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <link rel="stylesheet" href="../css/app.css" />
+</head>
+
+<body>
+
+    <div class="app">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-topo">
+                <span class="sidebar-logo">Vitão Corretor</span>
+                <button type="button" id="toggle-sidebar" aria-label="Recolher menu"><i
+                        class="ti ti-chevrons-left"></i></button>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="home.html" class="menu-item">
+                    <span class="menu-icone"><i class="ti ti-home"></i></span>
+                    <span class="menu-texto">Home</span>
+                </a>
+                <a href="imoveis.html" class="menu-item ativo">
+                    <span class="menu-icone"><i class="ti ti-building"></i></span>
+                    <span class="menu-texto">Imóveis</span>
+                </a>
+                <a href="proprietarios.html" class="menu-item">
+                    <span class="menu-icone"><i class="ti ti-user"></i></span>
+                    <span class="menu-texto">Proprietários</span>
+                </a>
+                <a href="leads.html" class="menu-item">
+                    <span class="menu-icone"><i class="ti ti-target-arrow"></i></span>
+                    <span class="menu-texto">Leads</span>
+                </a>
+                <a href="negociacoes.html" class="menu-item">
+                    <span class="menu-icone"><i class="ti ti-briefcase"></i></span>
+                    <span class="menu-texto">Negociações</span>
+                </a>
+                <a href="agenda.html" class="menu-item">
+                    <span class="menu-icone"><i class="ti ti-calendar"></i></span>
+                    <span class="menu-texto">Agenda</span>
+                </a>
+                <a href="financeiro.html" class="menu-item">
+                    <span class="menu-icone"><i class="ti ti-wallet"></i></span>
+                    <span class="menu-texto">Financeiro</span>
+                </a>
+                <a href="configuracoes.html" class="menu-item">
+                    <span class="menu-icone"><i class="ti ti-settings"></i></span>
+                    <span class="menu-texto">Configurações</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-rodape">
+                <div class="usuario">
+                    <div class="usuario-avatar">R</div>
+                    <div class="usuario-info">
+                        <span class="usuario-nome">Raquelle</span>
+                        <span class="usuario-cargo">Administradora</span>
+                    </div>
+                </div>
+
+                <a href="../index.html" class="menu-item">
+                    <span class="menu-icone"><i class="ti ti-logout"></i></span>
+                    <span class="menu-texto">Sair</span>
+                </a>
+            </div>
+
+        </aside>
+
+        <main class="conteudo">
+
+            <header class="topo-pagina">
+                <h1>Imóveis</h1>
+                <div class="topo-acoes">
+                    <button type="button" class="btn-primario" id="abrir-modal">
+                        <i class="ti ti-plus"></i> Novo imóvel
+                    </button>
+                </div>
+            </header>
+
+            <div class="filtro-status" id="filtro-status">
+                <button type="button" class="filtro-item ativo" data-status="todos" id="filtro-todos">Todos</button>
+                <button type="button" class="filtro-item filtro-destaque" data-status="captacao"
+                    id="filtro-captacao">Captação</button>
+                <button type="button" class="filtro-item" data-status="disponivel" id="filtro-disponivel">Disponível</button>
+                <button type="button" class="filtro-item" data-status="reservado" id="filtro-reservado">Reservado</button>
+                <button type="button" class="filtro-item" data-status="vendido" id="filtro-vendido">Vendido</button>
+                <button type="button" class="filtro-item" data-status="alugado" id="filtro-alugado">Alugado</button>
+                <button type="button" class="filtro-item" data-status="inativo" id="filtro-inativo">Inativo</button>
+            </div>
+
+            <section class="card-lista">
+                <table class="tabela-leads">
+                    <thead>
+                        <tr>
+                            <th>Foto</th>
+                            <th>Título</th>
+                            <th>Tipo</th>
+                            <th>Bairro</th>
+                            <th>Valor</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-imoveis">
+                        <tr>
+                            <td><img class="foto-miniatura" src="https://placehold.co/48x48" alt="" /></td>
+                            <td>Apartamento 2 dorm — Centro</td>
+                            <td>Apartamento</td>
+                            <td>Centro</td>
+                            <td>R$ 350.000,00</td>
+                            <td><span class="badge status-captacao">Captação</span></td>
+                            <td class="acoes">
+                                <button type="button" class="btn-icone" aria-label="Editar">
+                                    <i class="ti ti-pencil"></i>
+                                </button>
+                                <button type="button" class="btn-icone" aria-label="Excluir">
+                                    <i class="ti ti-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+    </div>
+
+    <div class="modal escondido" id="modal-imovel">
+        <div class="modal-caixa">
+
+            <header class="modal-topo">
+                <h2 id="titulo-modal">Novo imóvel</h2>
+                <button type="button" class="btn-fechar" id="fechar-modal" aria-label="Fechar">
+                    <i class="ti ti-x"></i>
+                </button>
+            </header>
+
+            <form id="form-imovel" class="form-grid">
+
+                <div class="campo campo-largo">
+                    <label for="titulo">Título</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                </div>
+
+                <div class="campo">
+                    <label for="tipo">Tipo</label>
+                    <select id="tipo" name="tipo">
+                        <option value="apartamento">Apartamento</option>
+                        <option value="casa">Casa</option>
+                        <option value="cobertura">Cobertura</option>
+                        <option value="terreno">Terreno</option>
+                        <option value="sala-comercial">Sala comercial</option>
+                        <option value="galpao">Galpão</option>
+                        <option value="rural">Rural</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="finalidade">Finalidade</label>
+                    <select id="finalidade" name="finalidade">
+                        <option value="venda">Venda</option>
+                        <option value="locacao">Locação</option>
+                        <option value="venda-locacao">Venda e locação</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" name="bairro" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade">
+                </div>
+
+                <div class="campo campo-largo">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" name="endereco" placeholder="Rua, número, complemento">
+                </div>
+
+                <div class="campo">
+                    <label for="valor">Valor</label>
+                    <input type="number" id="valor" name="valor" min="0">
+                </div>
+
+                <div class="campo">
+                    <label for="area">Área (m²)</label>
+                    <input type="number" id="area" name="area" min="0">
+                </div>
+
+                <div class="campo">
+                    <label for="quartos">Quartos</label>
+                    <input type="number" id="quartos" name="quartos" min="0">
+                </div>
+
+                <div class="campo">
+                    <label for="banheiros">Banheiros</label>
+                    <input type="number" id="banheiros" name="banheiros" min="0">
+                </div>
+
+                <div class="campo">
+                    <label for="vagas">Vagas de garagem</label>
+                    <input type="number" id="vagas" name="vagas" min="0">
+                </div>
+
+                <div class="campo">
+                    <label for="status">Status</label>
+                    <select id="status" name="status">
+                        <option value="captacao">Captação</option>
+                        <option value="disponivel">Disponível</option>
+                        <option value="reservado">Reservado</option>
+                        <option value="vendido">Vendido</option>
+                        <option value="alugado">Alugado</option>
+                        <option value="inativo">Inativo</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="foto">URL da foto</label>
+                    <input type="url" id="foto" name="foto" placeholder="https://...">
+                </div>
+
+                <div class="campo-checkbox campo-largo">
+                    <input type="checkbox" id="publicarSite" name="publicarSite">
+                    <label for="publicarSite">Publicar no site?</label>
+                </div>
+
+                <div class="campo campo-largo">
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" name="descricao" rows="3"></textarea>
+                </div>
+
+                <h3 class="form-secao">Dados do proprietário</h3>
+
+                <div class="campo">
+                    <label for="proprietarioNome">Nome</label>
+                    <input type="text" id="proprietarioNome" name="proprietarioNome" required>
+                </div>
+
+                <div class="campo">
+                    <label for="proprietarioTelefone">Telefone / WhatsApp</label>
+                    <input type="tel" id="proprietarioTelefone" name="proprietarioTelefone" required>
+                </div>
+
+                <div class="form-acoes">
+                    <button type="button" class="btn-secundario" id="cancelar-modal">Cancelar</button>
+                    <button type="submit" class="btn-primario">Salvar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
