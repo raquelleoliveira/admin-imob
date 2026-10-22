@@ -74,102 +74,20 @@
         </aside>
 
         <main class="conteudo">
+
             <header class="topo-pagina">
                 <h1>Leads</h1>
-                <button type="button" class="btn-secundario">Exportar backup</button>
+                <div class="topo-acoes">
+                    <button type="button" class="btn-secundario" id="exportar-backup">
+                        <i class="ti ti-download"></i> Exportar backup
+                    </button>
+                    <button type="button" class="btn-primario" id="abrir-modal">
+                        <i class="ti ti-plus"></i> Novo lead
+                    </button>
+                </div>
             </header>
 
-            <section class="card-form">
-                <h2>Novo lead</h2>
-
-                <form id="form-lead">
-                    <div class="campo">
-                        <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" required>
-                    </div>
-
-                    <div class="campo">
-                        <label for="telefone">Telefone / WhatsApp</label>
-                        <input type="tel" id="telefone" name="telefone" required>
-                    </div>
-
-                    <div class="campo">
-                        <label for="origem">Origem</label>
-                        <select id="origem" name="origem">
-                            <option value="">Selecione</option>
-                            <option value="instagram">Instagram</option>
-                            <option value="facebook">Facebook</option>
-                            <option value="google">Google</option>
-                            <option value="site">Site / Tecimob</option>
-                            <option value="whatsapp">WhatsApp</option>
-                            <option value="indicacao">Indicação</option>
-                            <option value="placa">Placa / rua</option>
-                            <option value="outro">Outro</option>
-                        </select>
-                    </div>
-
-                    <div class="campo escondido" id="campo-origem-outro">
-                        <label for="origemOutro">Qual origem?</label>
-                        <input type="text" id="origemOutro" name="origemOutro">
-                    </div>
-
-                    <div class="campo">
-                        <label for="interesse">Interesse</label>
-                        <select id="interesse" name="interesse">
-                            <option value="comprar">Comprar</option>
-                            <option value="alugar">Alugar</option>
-                        </select>
-                    </div>
-
-                    <div class="campo">
-                        <label for="buscaPor">O que procura</label>
-                        <input type="text" id="buscaPor" name="buscaPor" placeholder="Apto 2 dorm no Centro">
-                    </div>
-
-                    <div class="campo">
-                        <label for="valorMin">Valor mínimo</label>
-                        <input type="number" id="valorMin" name="valorMin" min="0">
-                    </div>
-
-                    <div class="campo">
-                        <label for="valorMax">Valor máximo</label>
-                        <input type="number" id="valorMax" name="valorMax" min="0">
-                    </div>
-
-                    <div class="campo">
-                        <label for="status">Status</label>
-                        <select id="status" name="status">
-                            <option value="novo">Novo</option>
-                            <option value="em-contato">Em contato</option>
-                            <option value="visita-agendada">Visita agendada</option>
-                            <option value="proposta">Proposta</option>
-                            <option value="fechado">Fechado</option>
-                            <option value="perdido">Perdido</option>
-                        </select>
-                    </div>
-
-                    <div class="campo escondido" id="campo-motivo-perda">
-                        <label for="motivoPerda">Motivo da perda</label>
-                        <input type="text" id="motivoPerda" name="motivoPerda">
-                    </div>
-
-                    <div class="campo">
-                        <label for="proximoContato">Próximo contato</label>
-                        <input type="date" id="proximoContato" name="proximoContato">
-                    </div>
-
-                    <div class="campo campo-largo">
-                        <label for="observacoes">Observações</label>
-                        <textarea id="observacoes" name="observacoes" rows="3"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-primario">Salvar lead</button>
-                </form>
-            </section>
-
             <section class="card-lista">
-                <h2>Meus leads</h2>
-
                 <table class="tabela-leads">
                     <thead>
                         <tr>
@@ -188,16 +106,121 @@
                             <td>Comprar</td>
                             <td><span class="badge status-novo">Novo</span></td>
                             <td>28/10/2026</td>
-                            <td>
-                                <button type="button" class="btn-icone">Editar</button>
-                                <button type="button" class="btn-icone">Excluir</button>
+                            <td class="acoes">
+                                <button type="button" class="btn-icone" aria-label="Editar">
+                                    <i class="ti ti-pencil"></i>
+                                </button>
+                                <button type="button" class="btn-icone" aria-label="Excluir">
+                                    <i class="ti ti-trash"></i>
+                                </button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </section>
+
         </main>
 
+    </div>
+
+    <div class="modal escondido" id="modal-lead">
+        <div class="modal-caixa">
+
+            <header class="modal-topo">
+                <h2 id="titulo-modal">Novo lead</h2>
+                <button type="button" class="btn-fechar" id="fechar-modal" aria-label="Fechar">
+                    <i class="ti ti-x"></i>
+                </button>
+            </header>
+
+            <form id="form-lead">
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone / WhatsApp</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+
+                <div class="campo">
+                    <label for="origem">Origem</label>
+                    <select id="origem" name="origem">
+                        <option value="">Selecione</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="google">Google</option>
+                        <option value="site">Site / Tecimob</option>
+                        <option value="whatsapp">WhatsApp</option>
+                        <option value="indicacao">Indicação</option>
+                        <option value="placa">Placa / rua</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="campo escondido" id="campo-origem-outro">
+                    <label for="origemOutro">Qual origem?</label>
+                    <input type="text" id="origemOutro" name="origemOutro">
+                </div>
+
+                <div class="campo">
+                    <label for="interesse">Interesse</label>
+                    <select id="interesse" name="interesse">
+                        <option value="comprar">Comprar</option>
+                        <option value="alugar">Alugar</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="buscaPor">O que procura</label>
+                    <input type="text" id="buscaPor" name="buscaPor" placeholder="Apto 2 dorm no Centro">
+                </div>
+
+                <div class="campo">
+                    <label for="valorMin">Valor mínimo</label>
+                    <input type="number" id="valorMin" name="valorMin" min="0">
+                </div>
+
+                <div class="campo">
+                    <label for="valorMax">Valor máximo</label>
+                    <input type="number" id="valorMax" name="valorMax" min="0">
+                </div>
+
+                <div class="campo">
+                    <label for="status">Status</label>
+                    <select id="status" name="status">
+                        <option value="novo">Novo</option>
+                        <option value="em-contato">Em contato</option>
+                        <option value="visita-agendada">Visita agendada</option>
+                        <option value="proposta">Proposta</option>
+                        <option value="fechado">Fechado</option>
+                        <option value="perdido">Perdido</option>
+                    </select>
+                </div>
+
+                <div class="campo escondido" id="campo-motivo-perda">
+                    <label for="motivoPerda">Motivo da perda</label>
+                    <input type="text" id="motivoPerda" name="motivoPerda">
+                </div>
+
+                <div class="campo">
+                    <label for="proximoContato">Próximo contato</label>
+                    <input type="date" id="proximoContato" name="proximoContato">
+                </div>
+
+                <div class="campo campo-largo">
+                    <label for="observacoes">Observações</label>
+                    <textarea id="observacoes" name="observacoes" rows="3"></textarea>
+                </div>
+
+                <div class="form-acoes">
+                    <button type="button" class="btn-secundario" id="cancelar-modal">Cancelar</button>
+                    <button type="submit" class="btn-primario">Salvar</button>
+                </div>
+            </form>
+
+        </div>
     </div>
 
     <script src="../js/app.js"></script>
