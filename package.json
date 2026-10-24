@@ -1,0 +1,27 @@
+{
+  "name": "admin-imob",
+  "version": "1.0.0",
+  "description": "Admin da imobiliária — MVP em HTML/CSS/JS",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raquelleoliveira/admin-imob.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/raquelleoliveira/admin-imob/issues"
+  },
+  "homepage": "https://github.com/raquelleoliveira/admin-imob#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
