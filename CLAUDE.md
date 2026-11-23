@@ -8,6 +8,11 @@
 
 - HTML, CSS e JS puro, sem framework e sem build.
 - `index.html` (login) na raiz, telas internas em `pages/`, estilos em `css/app.css`, scripts em `js/app.js`.
+- Toda alteração de estrutura do banco vira um arquivo numerado em `server/migrations/`.
+
+## Comandos
+
+- `npm start` — sobe o servidor Express em http://localhost:3000 (carrega o `.env`).
 
 ## CSS
 
