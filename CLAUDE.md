@@ -38,7 +38,7 @@
 
 ## JavaScript
 
-- O JavaScript deste projeto é escrito manualmente, sem geração automática de código.
+- O JavaScript do front-end (`js/`) é escrito manualmente, sem geração automática de código. O back-end (`server/`) pode ser gerado.
 - Tarefas de interface entregam apenas HTML e CSS, com os `id` e classes necessários nos elementos, e descrevem no PR qual comportamento ainda falta implementar.
 
 ## Git
